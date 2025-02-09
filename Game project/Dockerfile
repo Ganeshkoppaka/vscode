@@ -11,6 +11,6 @@ COPY . /app
 # (If you have dependencies, create a requirements.txt file in the same folder as the Dockerfile)
 #COPY requirements.txt .
 #RUN pip install -r requirements.txt
-
+EXPOSE 8000
 # Run the Python script when the container launches
 CMD ["python", "main.py"]

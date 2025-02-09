@@ -16,4 +16,4 @@ spec:
       - name: snake-water-gun-game
         image: ganesh823/snake-water-gun-game  # The name of the image you built in Minikube
         ports:
-        - containerPort: 8080  # The port Flask runs on in your Dockerfile
+        - containerPort: 8000  # The port Flask runs on in your Dockerfile
