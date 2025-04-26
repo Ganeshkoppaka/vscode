@@ -1,0 +1,26 @@
+name: "CI/CD: Deploy Frontend to Azure App Service"
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Deploy Static Site to Azure
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'snakewatergun-frontend' # your App Service name
+          package: '.'
+
