@@ -19,7 +19,7 @@ function playGame(playerChoice) {
     result = `You win! ${playerChoice} beats ${computerChoice}.`;
     playerScore++;
   } else {
-    result = `You lose! ${computerChoice} beats ${playerChoice}.`;
+    result = `You lost! ${computerChoice} beats ${playerChoice}.`;
     computerScore++;
   }
 
